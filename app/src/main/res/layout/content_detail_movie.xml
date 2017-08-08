@@ -1,0 +1,155 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v4.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    tools:showIn="@layout/activity_movie_detail">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/md_amber_50"
+            android:padding="16dp">
+
+            <ImageView
+                android:id="@+id/movie_poster"
+                android:layout_width="125dp"
+                android:layout_height="175dp"
+                android:scaleType="fitXY"
+                android:src="@drawable/movie_sample" />
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="4dp"
+                android:layout_toRightOf="@+id/movie_poster"
+                android:orientation="vertical">
+
+                <com.projectmovieappstage2.util.CustomTextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="6dp"
+                    android:text="@string/titile"
+                    android:textSize="18sp"
+                    android:textStyle="italic"
+                    app:font="RobotoCondensed-Regular.ttf" />
+
+                <com.projectmovieappstage2.util.CustomTextView
+                    android:id="@+id/movie_title"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="6dp"
+                    android:text="@string/movie_titile"
+                    android:textSize="24sp"
+                    app:font="RobotoCondensed-Regular.ttf" />
+
+                <com.projectmovieappstage2.util.CustomTextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="6dp"
+                    android:layout_marginTop="10dp"
+                    android:text="@string/release_date"
+                    android:textSize="16sp"
+                    android:textStyle="italic"
+                    app:font="RobotoCondensed-Regular.ttf" />
+
+                <com.projectmovieappstage2.util.CustomTextView
+                    android:id="@+id/movie_release_date"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="6dp"
+                    android:text="@string/movie_release_date"
+                    android:textSize="20sp"
+                    app:font="RobotoCondensed-Regular.ttf" />
+
+                <com.projectmovieappstage2.util.CustomTextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="6dp"
+                    android:layout_marginTop="10dp"
+                    android:text="@string/ratting"
+                    android:textSize="16sp"
+                    android:textStyle="italic"
+                    app:font="RobotoCondensed-Regular.ttf" />
+
+                <com.projectmovieappstage2.util.CustomTextView
+                    android:id="@+id/movie_ratting"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="6dp"
+                    android:text="@string/movie_ratting"
+                    android:textColor="@color/md_orange_800"
+                    android:textSize="20sp"
+                    app:font="RobotoCondensed-Regular.ttf" />
+
+            </LinearLayout>
+
+
+        </RelativeLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <com.projectmovieappstage2.util.CustomTextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/colorPrimary"
+                android:padding="8dp"
+                android:text="@string/movie_overview"
+                android:textColor="@color/md_white_1000"
+                android:textSize="16sp" />
+
+            <com.projectmovieappstage2.util.CustomTextView
+                android:id="@+id/movie_overview"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="6dp"
+                android:padding="8dp"
+                android:textColor="@color/md_grey_700"
+                android:textSize="14sp"
+                app:font="RobotoCondensed-Regular.ttf" />
+
+        </LinearLayout>
+
+        <com.projectmovieappstage2.util.CustomTextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/colorPrimary"
+            android:padding="8dp"
+            android:text="@string/movie_review"
+            android:textColor="@color/md_white_1000"
+            android:textSize="16sp" />
+
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/list_review_movie"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/md_grey_100" />
+
+        <com.projectmovieappstage2.util.CustomTextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/colorPrimary"
+            android:padding="8dp"
+            android:text="@string/movie_trailers"
+            android:textColor="@color/md_white_1000"
+            android:textSize="16sp" />
+
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/list_trailer_movie"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/md_grey_100" />
+
+    </LinearLayout>
+
+</android.support.v4.widget.NestedScrollView>
